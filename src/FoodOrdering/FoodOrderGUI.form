@@ -178,7 +178,7 @@
             </constraints>
             <properties>
               <font size="24"/>
-              <selected value="true"/>
+              <selected value="false"/>
               <text value="None"/>
             </properties>
           </component>
