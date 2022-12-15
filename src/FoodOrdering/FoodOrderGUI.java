@@ -56,6 +56,7 @@ public class FoodOrderGUI extends JFrame{
         discounts.add(rb10);
         discounts.add(rb15);
 
+
         btnOrder.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
@@ -104,40 +105,20 @@ public class FoodOrderGUI extends JFrame{
                 }
             });
         }
-        rbNone.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                rb5.setSelected(false);
-                rb10.setSelected(false);
-                rb15.setSelected(false);
-            }
-        });
 
-        rb5.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                rbNone.setSelected(false);
-                rb10.setSelected(false);
-                rb15.setSelected(false);
-            }
-        });
+        for (JRadioButton r : discounts) {
+            r.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent ae) {
+                    for (JRadioButton e : discounts) {
+                        if (e != r) {
+                            e.setSelected(false);
+                        }
+                    }
+                }
+            });
+        }
 
-        rb10.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                rbNone.setSelected(false);
-                rb5.setSelected(false);
-                rb15.setSelected(false);
-            }
-        });
-        rb15.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                rbNone.setSelected(false);
-                rb5.setSelected(false);
-                rb10.setSelected(false);
-            }
-        });
     }
 
     public static void main(String[] args) throws Exception{
