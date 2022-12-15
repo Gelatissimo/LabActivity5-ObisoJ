@@ -11,33 +11,33 @@ public class LeapYearGUI extends JFrame{
     private JTextField tfYear;
     private JButton btnCheckYear;
 
-    public LeapYearGUI() throws Exception{
-        btnCheckYear.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent ae) {
-                LeapYearChecker();
-            }
-        });
-
-        tfYear.addKeyListener(new KeyListener() {
-            @Override
-            public void keyTyped(KeyEvent e) {
-
-            }
-
-            @Override
-            public void keyPressed(KeyEvent e) {
-                if (e.getKeyCode() == KeyEvent.VK_ENTER) {
-                    LeapYearChecker();
-                }
-            }
-
-            @Override
-            public void keyReleased(KeyEvent e) {
-
-            }
-        });
-    }
+//    public LeapYearGUI() throws Exception{
+//        btnCheckYear.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent ae) {
+//                LeapYearChecker();
+//            }
+//        });
+//
+//        tfYear.addKeyListener(new KeyListener() {
+//            @Override
+//            public void keyTyped(KeyEvent e) {
+//
+//            }
+//
+//            @Override
+//            public void keyPressed(KeyEvent e) {
+//                if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+//                    LeapYearChecker();
+//                }
+//            }
+//
+//            @Override
+//            public void keyReleased(KeyEvent e) {
+//
+//            }
+//        });
+//    }
 
     public static void main(String[] args) throws Exception {
         LeapYearGUI app = new LeapYearGUI();
@@ -48,17 +48,17 @@ public class LeapYearGUI extends JFrame{
         app.setVisible(true);
     }
 
-    public void LeapYearChecker() {
-        try {
-            int year = Integer.parseInt(tfYear.getText());
-            if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) {
-                JOptionPane.showMessageDialog(pnlLeapYearChecker, "Leap year");
-            } else {
-                JOptionPane.showMessageDialog(pnlLeapYearChecker, "Not a leap year");
-            }
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(pnlLeapYearChecker, "Invalid input");
-        }
-    }
+//    public void LeapYearChecker() {
+//        try {
+//            int year = Integer.parseInt(tfYear.getText());
+//            if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) {
+//                JOptionPane.showMessageDialog(pnlLeapYearChecker, "Leap year");
+//            } else {
+//                JOptionPane.showMessageDialog(pnlLeapYearChecker, "Not a leap year");
+//            }
+//        } catch (Exception e) {
+//            JOptionPane.showMessageDialog(pnlLeapYearChecker, "Invalid input");
+//        }
+//    }
 
 }
